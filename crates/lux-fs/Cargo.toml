@@ -1,0 +1,33 @@
+[package]
+name = "lux-fs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "FUSE filesystem integration for Lux"
+
+[dependencies]
+lux-core.workspace = true
+lux-proto.workspace = true
+lux-store.workspace = true
+lux-dht.workspace = true
+lux-net.workspace = true
+lux-cdc.workspace = true
+
+# FUSE
+fuser.workspace = true
+
+# Async
+tokio.workspace = true
+futures.workspace = true
+async-trait.workspace = true
+
+# System
+libc = "0.2"
+
+# Utilities
+parking_lot.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tempfile = "3.9"

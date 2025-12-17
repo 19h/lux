@@ -1,0 +1,34 @@
+[package]
+name = "lux-net"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Network transport layer for Lux"
+
+[dependencies]
+lux-core.workspace = true
+lux-proto.workspace = true
+
+# Networking
+quinn.workspace = true
+rustls.workspace = true
+snow.workspace = true
+rcgen.workspace = true
+
+# Async
+tokio.workspace = true
+futures.workspace = true
+async-trait.workspace = true
+
+# Crypto
+blake3.workspace = true
+
+# Utilities
+bytes.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+parking_lot.workspace = true
+dashmap.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }

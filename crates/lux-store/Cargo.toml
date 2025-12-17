@@ -1,0 +1,27 @@
+[package]
+name = "lux-store"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Local storage engine for Lux"
+
+[dependencies]
+lux-core.workspace = true
+lux-proto.workspace = true
+lux-cdc.workspace = true
+
+# Storage
+rocksdb.workspace = true
+parking_lot.workspace = true
+
+# Async
+tokio.workspace = true
+async-trait.workspace = true
+
+# Utilities
+bytes.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tempfile = "3.9"

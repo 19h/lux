@@ -1,0 +1,32 @@
+[package]
+name = "lux-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Core types, traits, and primitives for Lux distributed filesystem"
+
+[dependencies]
+# Cryptography
+blake3.workspace = true
+hkdf.workspace = true
+hmac.workspace = true
+sha2.workspace = true
+chacha20poly1305.workspace = true
+ed25519-dalek.workspace = true
+x25519-dalek.workspace = true
+rand.workspace = true
+rand_core.workspace = true
+
+# Serialization
+serde.workspace = true
+base64.workspace = true
+
+# Utilities
+bytes.workspace = true
+hex.workspace = true
+thiserror.workspace = true
+smallvec.workspace = true
+zeroize = "1.8"
+
+[dev-dependencies]
+hex-literal = "0.4"

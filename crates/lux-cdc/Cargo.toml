@@ -1,0 +1,15 @@
+[package]
+name = "lux-cdc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Content-Defined Chunking (FastCDC) implementation for Lux"
+
+[dependencies]
+lux-core.workspace = true
+blake3.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+rand.workspace = true
+hex-literal = "0.4"

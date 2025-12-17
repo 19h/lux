@@ -1,0 +1,27 @@
+[package]
+name = "lux-proto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Wire protocol and message definitions for Lux"
+
+[dependencies]
+lux-core.workspace = true
+lux-cdc.workspace = true
+
+# Cryptography
+blake3.workspace = true
+ed25519-dalek.workspace = true
+
+# Serialization
+serde.workspace = true
+serde_with = { version = "3.11", features = ["hex"] }
+bytes.workspace = true
+base64.workspace = true
+
+# Utilities
+thiserror.workspace = true
+smallvec.workspace = true
+
+[dev-dependencies]
+hex-literal = "0.4"

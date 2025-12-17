@@ -1,0 +1,87 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/lux-core",
+    "crates/lux-cdc",
+    "crates/lux-proto",
+    "crates/lux-store",
+    "crates/lux-dht",
+    "crates/lux-net",
+    "crates/lux-fs",
+    "crates/lux-tests",
+    "bin/lux",
+    "bin/luxd",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/lux-fs/lux"
+rust-version = "1.75"
+
+[workspace.dependencies]
+# Internal crates
+lux-core = { path = "crates/lux-core" }
+lux-cdc = { path = "crates/lux-cdc" }
+lux-proto = { path = "crates/lux-proto" }
+lux-store = { path = "crates/lux-store" }
+lux-dht = { path = "crates/lux-dht" }
+lux-net = { path = "crates/lux-net" }
+lux-fs = { path = "crates/lux-fs" }
+lux-tests = { path = "crates/lux-tests" }
+
+# Testing
+tempfile = "3.14"
+serde_with = "3.9"
+
+# Cryptography
+blake3 = "1.5"
+hkdf = "0.12"
+hmac = "0.12"
+sha2 = "0.10"
+chacha20poly1305 = "0.10"
+ed25519-dalek = { version = "2.1", features = ["rand_core", "hazmat"] }
+x25519-dalek = { version = "2.0", features = ["static_secrets"] }
+rand = "0.8"
+rand_core = "0.6"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.22"
+
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+async-trait = "0.1"
+
+# Networking
+quinn = "0.11"
+rustls = { version = "0.23", default-features = false, features = ["ring", "std"] }
+snow = "0.9"
+rcgen = "0.13"
+
+# Storage
+rocksdb = { version = "0.24", default-features = false, features = ["multi-threaded-cf"] }
+parking_lot = "0.12"
+
+# FUSE
+fuser = "0.14"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+toml = "0.8"
+
+# Logging and errors
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Utilities
+bytes = "1.5"
+hex = "0.4"
+dashmap = "5.5"
+smallvec = "1.13"
+bitflags = "2.4"

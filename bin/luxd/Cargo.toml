@@ -1,0 +1,38 @@
+[package]
+name = "luxd"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Daemon service for Lux distributed filesystem"
+
+[[bin]]
+name = "luxd"
+path = "src/main.rs"
+
+[dependencies]
+lux-core.workspace = true
+lux-proto.workspace = true
+lux-store.workspace = true
+lux-dht.workspace = true
+lux-net.workspace = true
+lux-fs.workspace = true
+lux-cdc.workspace = true
+
+# CLI
+clap.workspace = true
+toml.workspace = true
+
+# Async
+tokio.workspace = true
+futures.workspace = true
+
+# Utilities
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+hex.workspace = true
+dirs = "5.0"
+serde.workspace = true
+rand.workspace = true
+bytes.workspace = true

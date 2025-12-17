@@ -1,0 +1,27 @@
+[package]
+name = "lux-dht"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Kademlia DHT implementation for Lux"
+
+[dependencies]
+lux-core.workspace = true
+lux-proto.workspace = true
+lux-net.workspace = true
+
+# Async
+tokio.workspace = true
+futures.workspace = true
+async-trait.workspace = true
+
+# Utilities
+dashmap.workspace = true
+parking_lot.workspace = true
+smallvec.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+rand.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }

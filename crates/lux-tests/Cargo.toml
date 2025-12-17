@@ -1,0 +1,33 @@
+[package]
+name = "lux-tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Integration and end-to-end tests for Lux"
+publish = false
+
+[dependencies]
+# Internal crates
+lux-core = { path = "../lux-core" }
+lux-cdc = { path = "../lux-cdc" }
+lux-proto = { path = "../lux-proto" }
+lux-store = { path = "../lux-store" }
+lux-dht = { path = "../lux-dht" }
+lux-net = { path = "../lux-net" }
+
+# Testing
+tokio = { workspace = true, features = ["full", "test-util"] }
+futures = { workspace = true }
+async-trait = { workspace = true }
+
+# Utilities
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+tempfile = "3.14"
+rand = { workspace = true }
+bytes = { workspace = true }
+hex = { workspace = true }
+
+[dev-dependencies]
+# Test framework
+test-log = { version = "0.2", features = ["trace"] }
